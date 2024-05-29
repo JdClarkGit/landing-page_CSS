@@ -31,7 +31,7 @@ body {
 
 .container {
   display: flex;
-  height: 100%;
+  height: calc(100% - 40px); /* Adjust height to account for the header */
   width: 100%;
 }
 
@@ -41,6 +41,11 @@ body {
   width: 200px;
   padding: 20px;
   box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  top: 40px; /* Adjust to start below the header */
+  left: 0;
+  overflow-y: auto;
 }
 
 .side-bar nav ul {
@@ -54,10 +59,11 @@ body {
 
 .main-body {
   background-color: #f4f4f4;
-  flex: 1;
+  margin-left: 200px; /* Adjust to account for the sidebar width */
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
+  flex: 1;
 }
 
 .lower-nav {
